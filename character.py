@@ -12,11 +12,14 @@ ancestry_data = {
 class Character:
     def __init__(self):
         self.ancestry_roll = roll_d12()
+        if not (1 <= self.ancestry_roll <= 12):
+            raise ValueError("Invalid ancestry roll value.")
         self.ancestry = self.generate_ancestry()
 
     def generate_ancestry(self):
         for range_, ancestry_name in ancestry_data.items():
             if range_[0] <= self.ancestry_roll <= range_[1]:
                 return ancestry_name
+        raise ValueError("Invalid ancestry roll value.")
 
         return None  # Default if no match found
