@@ -21,8 +21,6 @@ class_data = {
 class Character:
     def __init__(self):
         self.ancestry_roll = roll_d12(1)
-        if not (1 <= self.ancestry_roll <= 12):
-            raise ValueError("Invalid ancestry roll value.")
         self.ancestry = self.generate_ancestry()
 
     def generate_ancestry(self):
