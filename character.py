@@ -20,7 +20,7 @@ class_data = {
 
 class Character:
     def __init__(self):
-        self.ancestry_roll = roll_d12(1)
+        self.ancestry_roll = roll_d12()
         self.ancestry = self.generate_ancestry()
 
     def generate_ancestry(self):
