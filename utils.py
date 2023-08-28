@@ -1,7 +1,7 @@
 import time
 
 def prompt_to_roll():
-    return input("Press Enter to roll the dice, or type 'q' to exit...")
+    return input("Press Enter to roll the dice!")
 
 def clear_console():
     print("\033[H\033[J")  # Clear the console
