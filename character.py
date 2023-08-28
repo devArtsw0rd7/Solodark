@@ -9,6 +9,15 @@ ancestry_data = {
     (12, 12): "Goblin"
 }
 
+class_data = {
+    1: "Fighter",
+    2: "Priest",
+    3: "Thief",
+    4: "Wizard",
+    5: "Ranger",
+    6: "Bard"
+}
+
 class Character:
     def __init__(self):
         self.ancestry_roll = roll_d12()
